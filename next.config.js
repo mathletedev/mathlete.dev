@@ -1,7 +1,14 @@
-const { join } = require("path");
-
 module.exports = {
-	sassOptions: {
-		includePaths: [join(__dirname, "src", "styles")]
+	webpack: (config) => {
+		config.module.rules.push({
+			test: /\.md$/,
+			use: "raw-loader"
+		});
+		config.resolve.alias = {
+			...config.resolve.alias,
+			"~": __dirname
+		};
+
+		return config;
 	}
 };
