@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 
-const index: FC = () => {
+const Index: FC = () => {
 	return <div>Hello World!</div>;
 };
 
-export default index;
+export default Index;
