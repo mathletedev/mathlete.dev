@@ -26,6 +26,9 @@ const Layout: FC<Props> = ({ children, title = "MathleteDev" }) => {
 				<Link href="/blog">
 					<a>Blog</a>
 				</Link>
+				<Link href="/about">
+					<a>More</a>
+				</Link>
 			</nav>
 
 			{children}
