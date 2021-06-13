@@ -1,3 +1,10 @@
+:root {
+	--grey1: #545454;
+	--grey2: #393939;
+	--grey3: #202020;
+	--grey4: #111111;
+}
+
 * {
 	font-family: "Ubuntu";
 }
@@ -9,4 +16,22 @@ div#__next,
 div#__next > div {
 	height: 100%;
 	margin: 0;
+	background-image: linear-gradient(
+		to bottom left,
+		var(--grey4),
+		var(--grey3),
+		var(--grey2),
+		var(--grey1)
+	);
+}
+
+a {
+	text-decoration: none;
+}
+
+.unselectable {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }

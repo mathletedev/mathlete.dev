@@ -1,0 +1,11 @@
+#nav-bar {
+	position: fixed;
+	padding: 16px;
+	z-index: 10;
+}
+
+.nav-link {
+	color: white;
+	font-size: 24px;
+	padding-right: 12px;
+}

@@ -1,0 +1,26 @@
+#center {
+	margin: auto;
+	width: 50%;
+}
+
+#title {
+	height: 100vh;
+	width: 100%;
+}
+
+#title-padding {
+	height: 35%;
+}
+
+#name {
+	text-align: center;
+	font-size: 72px;
+	color: white;
+	font-weight: bold;
+}
+
+@media only screen and (max-width: 800px) {
+	#name {
+		font-size: 48px;
+	}
+}

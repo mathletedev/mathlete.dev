@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import React, { FC, ReactChild } from "react";
+import styles from "../styles/layout.module.css";
 
 interface Props {
 	children: ReactChild;
@@ -14,20 +15,20 @@ const Layout: FC<Props> = ({ children, title = "MathleteDev" }) => {
 				<title>{title}</title>
 				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
 				<link
-					href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap"
+					href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap"
 					rel="stylesheet"
 				/>
 				<link href="/img/favicon.png" rel="icon" />
 			</Head>
-			<nav>
+			<nav id={styles["nav-bar"]}>
 				<Link href="/">
-					<a>Home</a>
+					<a className={styles["nav-link"]}>Home</a>
 				</Link>
 				<Link href="/blog">
-					<a>Blog</a>
+					<a className={styles["nav-link"]}>Blog</a>
 				</Link>
 				<Link href="/about">
-					<a>More</a>
+					<a className={styles["nav-link"]}>More</a>
 				</Link>
 			</nav>
 
