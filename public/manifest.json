@@ -1,0 +1,21 @@
+{
+	"author": "Neal Wang",
+	"name": "MathleteDev",
+	"short_name": "My personal website",
+	"start_url": "/",
+	"display": "minimal-ui",
+	"orientation": "portrait-primary",
+	"icons": [
+		{
+			"src": "/icons/1024x1024.png",
+			"type": "image/png",
+			"sizes": "1024x1024"
+		},
+		{
+			"src": "/icons/256x256.png",
+			"type": "image/png",
+			"sizes": "256x256"
+		}
+	],
+	"splash_pages": null
+}
