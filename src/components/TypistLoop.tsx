@@ -18,7 +18,7 @@ const TypistLoop: FC<Props> = ({ words }) => {
 			{typing ? (
 				<Typist cursor={{ show: false }} onTypingDone={() => setTyping(false)}>
 					{words.map((word) => (
-						<div>
+						<div key={word}>
 							<Typist.Delay ms={1000} />
 							<div id={styles["typist-text"]} className="unselectable">
 								{word}

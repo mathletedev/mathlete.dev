@@ -23,6 +23,8 @@ div#__next > div {
 		var(--grey2),
 		var(--grey1)
 	);
+	background-attachment: fixed;
+	scroll-behavior: smooth;
 }
 
 a {

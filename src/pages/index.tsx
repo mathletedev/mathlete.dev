@@ -1,11 +1,12 @@
 import React, { FC } from "react";
+import Page from "../components/Page";
 import TypistLoop from "../components/TypistLoop";
 import styles from "../styles/index.module.css";
 
 const Index: FC = () => {
 	return (
 		<div id={styles.center}>
-			<div id={styles.title}>
+			<Page id="title" nextPage="about">
 				<div id={styles["title-padding"]}></div>
 				<div id={styles.name} className="unselectable">
 					MathleteDev
@@ -19,7 +20,16 @@ const Index: FC = () => {
 						"TypeScript User"
 					]}
 				/>
-			</div>
+			</Page>
+			<Page id="about" nextPage="skills">
+				<div className={styles.heading}>About</div>
+			</Page>
+			<Page id="skills" nextPage="contact">
+				<div className={styles.heading}>Skills</div>
+			</Page>
+			<Page id="contact">
+				<div className={styles.heading}>Contact</div>
+			</Page>
 		</div>
 	);
 };

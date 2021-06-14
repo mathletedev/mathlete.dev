@@ -3,18 +3,21 @@
 	width: 50%;
 }
 
-#title {
-	height: 100vh;
-	width: 100%;
-}
-
 #title-padding {
-	height: 35%;
+	height: 40%;
 }
 
 #name {
 	text-align: center;
 	font-size: 72px;
+	color: white;
+	font-weight: bold;
+}
+
+.heading {
+	padding-top: 50px;
+	text-align: center;
+	font-size: 48px;
 	color: white;
 	font-weight: bold;
 }
