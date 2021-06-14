@@ -1,15 +1,15 @@
 import Head from "next/head";
 import Link from "next/link";
-import React, { FC, ReactChild } from "react";
+import React, { FC } from "react";
 import { __baseURL__ } from "../lib/constants";
 import styles from "../styles/layout.module.css";
 
 interface Props {
-	children: ReactChild;
 	title?: string;
+	disableNav?: boolean;
 }
 
-const Layout: FC<Props> = ({ children, title }) => {
+const Layout: FC<Props> = ({ children, title, disableNav }) => {
 	return (
 		<div>
 			<Head>
@@ -30,17 +30,19 @@ const Layout: FC<Props> = ({ children, title }) => {
 				<meta charSet="utf-8" />
 				<link rel="manifest" href="/manifest.json" />
 			</Head>
-			<nav id={styles["nav-bar"]}>
-				<Link href="/">
-					<a className={styles["nav-link"]}>Home</a>
-				</Link>
-				<Link href="/blog">
-					<a className={styles["nav-link"]}>Blog</a>
-				</Link>
-				<Link href="/about">
-					<a className={styles["nav-link"]}>More</a>
-				</Link>
-			</nav>
+			{!disableNav && (
+				<nav id={styles["nav-bar"]}>
+					<Link href="/">
+						<a className={styles["nav-link"]}>Home</a>
+					</Link>
+					<Link href="/blog">
+						<a className={styles["nav-link"]}>Blog</a>
+					</Link>
+					<Link href="/about">
+						<a className={styles["nav-link"]}>More</a>
+					</Link>
+				</nav>
+			)}
 
 			{children}
 		</div>

@@ -3,3 +3,12 @@ export const dashCapitalize = (str: string) =>
 		.split("-")
 		.map((word) => `${word[0].toUpperCase()}${word.slice(1)}`)
 		.join(" ");
+
+export const getPageName = (pathname: string) => {
+	switch (pathname.slice(1)) {
+		case "about":
+			return "Rickroll";
+		case "blog":
+			return "Blog";
+	}
+};

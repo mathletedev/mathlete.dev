@@ -2,7 +2,7 @@ import React, { FC, Fragment } from "react";
 import styles from "../styles/page.module.css";
 
 interface Props {
-	id: string;
+	id?: string;
 	nextPage?: string;
 }
 

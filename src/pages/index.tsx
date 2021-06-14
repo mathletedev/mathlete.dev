@@ -6,7 +6,7 @@ import styles from "../styles/index.module.css";
 const Index: FC = () => {
 	return (
 		<div id={styles.center}>
-			<Page id="home" nextPage="about">
+			<Page nextPage="about">
 				<div id={styles["title-padding"]}></div>
 				<div id={styles.name} className="unselectable">
 					MathleteDev
