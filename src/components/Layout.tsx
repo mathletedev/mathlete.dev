@@ -38,7 +38,7 @@ const Layout: FC<Props> = ({ children, title, disableNav }) => {
 					<Link href="/blog">
 						<a className={styles["nav-link"]}>Blog</a>
 					</Link>
-					<Link href="/about">
+					<Link href="/more">
 						<a className={styles["nav-link"]}>More</a>
 					</Link>
 				</nav>

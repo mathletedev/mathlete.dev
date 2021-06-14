@@ -1,7 +1,7 @@
 import React, { FC, Fragment } from "react";
 import styles from "../styles/about.module.css";
 
-const About: FC = () => {
+const Rickroll: FC = () => {
 	return (
 		<Fragment>
 			<div id={styles.blocker}></div>
@@ -16,4 +16,4 @@ const About: FC = () => {
 	);
 };
 
-export default About;
+export default Rickroll;
