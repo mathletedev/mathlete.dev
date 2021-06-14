@@ -18,7 +18,7 @@ const App: FC<AppProps> = ({ Component, pageProps, router }) => {
 	return (
 		<Layout
 			title={getPageName(router.pathname)}
-			disableNav={router.pathname === "/about"}
+			disableNav={router.pathname === "/more"}
 		>
 			<Component {...pageProps} />
 		</Layout>
