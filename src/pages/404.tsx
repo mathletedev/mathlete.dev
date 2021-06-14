@@ -6,7 +6,7 @@ const _404: FC = () => {
 
 	useEffect(() => {
 		router.push("/");
-	}, []);
+	});
 
 	return <div></div>;
 };

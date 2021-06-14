@@ -12,10 +12,13 @@
 	right: 0;
 	fill: white;
 	transition: transform 0.5s cubic-bezier(0, 0, 0.5, 1);
+	animation: blink 3s linear infinite;
+	animation-delay: 2s;
 }
 
 .next-page:hover {
 	transform: scale(1.2);
+	animation: none;
 }
 
 .divider {
@@ -28,4 +31,10 @@
 	right: 0;
 	transform: translateY(50%);
 	background-color: tomato;
+}
+
+@keyframes blink {
+	50% {
+		opacity: 0;
+	}
 }

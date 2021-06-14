@@ -22,13 +22,19 @@ const Index: FC = () => {
 				/>
 			</Page>
 			<Page id="about" nextPage="skills">
-				<div className={styles.heading}>About</div>
+				<div className={styles.heading} data-aos="fade-right">
+					About
+				</div>
 			</Page>
 			<Page id="skills" nextPage="contact">
-				<div className={styles.heading}>Skills</div>
+				<div className={styles.heading} data-aos="fade-left">
+					Skills
+				</div>
 			</Page>
 			<Page id="contact">
-				<div className={styles.heading}>Contact</div>
+				<div className={styles.heading} data-aos="fade-right">
+					Contact
+				</div>
 			</Page>
 		</div>
 	);
