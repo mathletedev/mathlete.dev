@@ -46,6 +46,10 @@
 }
 
 @media only screen and (max-width: 800px) {
+	#center {
+		width: 65%;
+	}
+
 	#name {
 		font-size: 48px;
 	}
