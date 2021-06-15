@@ -4,23 +4,6 @@
 	width: 100%;
 }
 
-.next-page {
-	position: absolute;
-	margin: auto;
-	bottom: 50px;
-	left: 0;
-	right: 0;
-	fill: white;
-	transition: transform 0.5s cubic-bezier(0, 0, 0.5, 1);
-	animation: blink 3s linear infinite;
-	animation-delay: 2s;
-}
-
-.next-page:hover {
-	transform: scale(1.2);
-	animation: none;
-}
-
 .divider {
 	position: absolute;
 	margin: auto;
@@ -31,10 +14,4 @@
 	right: 0;
 	transform: translateY(50%);
 	background-color: tomato;
-}
-
-@keyframes blink {
-	50% {
-		opacity: 0;
-	}
 }
