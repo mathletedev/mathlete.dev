@@ -47,10 +47,16 @@
 
 @media only screen and (max-width: 800px) {
 	#name {
-		font-size: 36px;
+		font-size: 48px;
 	}
 
 	.heading {
+		font-size: 30px;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	#name {
 		font-size: 30px;
 	}
 }
