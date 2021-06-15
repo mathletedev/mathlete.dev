@@ -13,3 +13,9 @@
 .nav-link:hover {
 	color: skyblue;
 }
+
+@media only screen and (max-width: 800px) {
+	.nav-link {
+		font-size: 18px;
+	}
+}
