@@ -10,11 +10,15 @@
 }
 
 .nav-button-link {
-	margin-top: 8px;
-	margin-bottom: 8px;
+	margin-top: 12px;
+	margin-bottom: 12px;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
 }
 
 .nav-button {
+	transform: scale(1.5);
 	color: white;
 }
 
