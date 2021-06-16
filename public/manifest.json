@@ -4,6 +4,8 @@
 	"short_name": "My personal website",
 	"start_url": "/",
 	"display": "minimal-ui",
+	"background_color": "#111111",
+	"theme_color": "#87cefa",
 	"orientation": "portrait-primary",
 	"icons": [
 		{
