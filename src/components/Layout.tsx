@@ -27,6 +27,7 @@ const Layout: FC<Props> = ({ children, title, disableNav }) => {
 				<meta name="og:description" content="My personal website" />
 				<meta name="og:site_name" content="MathleteDev" />
 				<meta name="og:image" content={`${__baseURL__}/icons/256x256.png}`} />
+				<meta name="theme-color" content="#87cefa" data-react-helmet="true" />
 				<meta charSet="utf-8" />
 				<link rel="manifest" href="/manifest.json" />
 			</Head>
