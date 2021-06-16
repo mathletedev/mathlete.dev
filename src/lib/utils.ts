@@ -6,7 +6,7 @@ export const dashCapitalize = (str: string) =>
 
 export const getPageName = (pathname: string) => {
 	switch (pathname.slice(1)) {
-		case "about":
+		case "more":
 			return "Rickroll";
 		case "blog":
 			return "Blog";
