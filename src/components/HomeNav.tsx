@@ -7,11 +7,11 @@ const HomeNav: FC = () => {
 	return (
 		<div id={styles["nav-drawer"]}>
 			{Object.keys(__homePages__).map((path) => (
-				<a href={`#${path}`} key={path}>
+				<a href={`#${path}`} className={styles["nav-button-link"]} key={path}>
 					{__homePages__[path]}
 				</a>
 			))}
-			<a href="/more" key="more">
+			<a href="/more" className={styles["nav-button-link"]} key="more">
 				<More className={styles["nav-button"]} />
 			</a>
 		</div>

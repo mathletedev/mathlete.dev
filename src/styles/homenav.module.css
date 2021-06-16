@@ -9,10 +9,13 @@
 	width: 0;
 }
 
-.nav-button {
-	color: white;
+.nav-button-link {
 	margin-top: 8px;
 	margin-bottom: 8px;
+}
+
+.nav-button {
+	color: white;
 }
 
 .nav-button:hover {
