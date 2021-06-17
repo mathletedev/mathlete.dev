@@ -9,9 +9,7 @@ interface Props {
 const TypistLoop: FC<Props> = ({ words }) => {
 	const [typing, setTyping] = useState(true);
 
-	useEffect(() => {
-		setTyping(true);
-	}, [typing]);
+	useEffect(() => setTyping(true), [typing]);
 
 	return (
 		<Fragment>

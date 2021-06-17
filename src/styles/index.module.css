@@ -39,6 +39,22 @@
 	animation: none;
 }
 
+#center-contacts {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	align-content: center;
+	flex-wrap: wrap;
+}
+
+#flex-break {
+	width: 100%;
+	flex-basis: 100%;
+	height: 0;
+	margin: 0;
+	border: none;
+}
+
 @keyframes blink {
 	50% {
 		opacity: 0;
@@ -53,7 +69,9 @@
 	#name {
 		font-size: 48px;
 	}
+}
 
+@media only screen and (max-width: 700px) {
 	.heading {
 		font-size: 30px;
 	}

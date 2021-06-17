@@ -7,13 +7,13 @@ import { getPageName } from "../lib/utils";
 import "../styles/globals.css";
 
 const App: FC<AppProps> = ({ Component, pageProps, router }) => {
-	useEffect(() => {
+	useEffect(() =>
 		AOS.init({
 			duration: 1000,
 			delay: 500,
 			once: true
-		});
-	});
+		})
+	);
 
 	return (
 		<Layout

@@ -1,0 +1,26 @@
+.contact-card {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100px;
+	height: 100px;
+	border-radius: 25%;
+	margin: 25px;
+	transition: transform 0.2s cubic-bezier(0, 0, 0.5, 1);
+}
+
+.contact-card:hover {
+	transform: scale(1.1);
+}
+
+.card-icon {
+	width: 60%;
+}
+
+@media only screen and (max-width: 700px) {
+	.contact-card {
+		width: 75px;
+		height: 75px;
+		margin: 15px;
+	}
+}
