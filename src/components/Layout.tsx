@@ -10,6 +10,8 @@ interface Props {
 }
 
 const Layout: FC<Props> = ({ children, title, disableNav }) => {
+	title = title === "Rickroll" ? undefined : title;
+
 	return (
 		<div>
 			<Head>
