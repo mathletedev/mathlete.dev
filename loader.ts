@@ -1,29 +1,46 @@
+import { sync } from "glob";
 import matter from "gray-matter";
 
 export interface PostData {
+	postID: string;
 	title: string;
 	subtitle: string;
 	content: string;
 }
 
-const mdToPost = (md: string, postID: string) => {
-	const data = matter(md);
+type MdFile = { postID: string; contents: string };
+
+const mdToPost = (file: MdFile) => {
+	const data = matter(file.contents);
 
 	const post: PostData = {
+		postID: file.postID,
 		title: data.data.title,
 		subtitle: data.data.subtitle,
 		content: data.content
 	};
 
 	if (!post.title)
-		throw new Error(`Post [ ${postID} ] is missing field [ title ]`);
+		throw new Error(`Post [ ${file.postID} ] is missing field [ title ]`);
 	if (!post.content)
-		throw new Error(`Post [ ${postID} ] is missing field [ content ]`);
+		throw new Error(`Post [ ${file.postID} ] is missing field [ content ]`);
 
 	return post;
 };
 
-export const loadPost = async (postID: string) => {
-	const md = await import(`./md/blog/${postID}.md`);
-	return mdToPost(md.default as string, postID);
+const loadMdFile = async (postID: string): Promise<MdFile> => ({
+	postID,
+	contents: (await import(`./md/blog/${postID}.md`)).default
+});
+
+export const loadPost = async (postID: string) =>
+	mdToPost(await loadMdFile(postID));
+
+export const getAllPosts = async () => {
+	const mdPaths = sync(`./md/blog/*.md`);
+	const allPosts = await Promise.all(
+		mdPaths.map((path) => loadMdFile(path.slice(path.indexOf("blog/") + 5, -3)))
+	);
+
+	return allPosts.map(mdToPost);
 };

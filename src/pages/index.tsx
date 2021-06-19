@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React, { FC, Fragment, useEffect, useRef, useState } from "react";
 import ContactCard from "../components/ContactCard";
 import HomeNav from "../components/HomeNav";
@@ -42,7 +43,7 @@ const Index: FC = () => {
 							"TypeScript User"
 						]}
 					/>
-					<a
+					<Link
 						href={`#about`}
 						data-aos="zoom-in-up"
 						data-aos-duration={2000}
@@ -51,7 +52,7 @@ const Index: FC = () => {
 						<svg height={20} width={40} id={styles["read-more"]}>
 							<polygon points="0,0 40,0 20,20" />
 						</svg>
-					</a>
+					</Link>
 				</Page>
 				<Page id="about">
 					<div

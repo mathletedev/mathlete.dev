@@ -1,5 +1,5 @@
 module.exports = {
-	webpack: (config) => {
+	webpack: (config, { isServer }) => {
 		config.module.rules.push({
 			test: /\.md$/,
 			use: "raw-loader"
@@ -8,6 +8,8 @@ module.exports = {
 			...config.resolve.alias,
 			"~": __dirname
 		};
+
+		if (!isServer) config.node = { fs: "empty" };
 
 		return config;
 	}

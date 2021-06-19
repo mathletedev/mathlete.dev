@@ -1,0 +1,16 @@
+#center {
+	margin: auto;
+	width: 50%;
+}
+
+#title {
+	text-align: center;
+	font-size: 72px;
+	color: white;
+	font-weight: bold;
+	padding-top: 50px;
+}
+
+#extra {
+	height: 50px;
+}

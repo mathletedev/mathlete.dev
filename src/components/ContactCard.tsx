@@ -12,7 +12,7 @@ const ContactCard: FC<Props> = ({ url, imageUrl, color }) => {
 		<a href={url} target="_blank" key={url}>
 			<div
 				className={styles["contact-card"]}
-				style={{ backgroundColor: color }}
+				style={{ border: `2px solid ${color}` }}
 			>
 				<img className={styles["card-icon"]} src={imageUrl} />
 			</div>
