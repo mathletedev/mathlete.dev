@@ -96,6 +96,7 @@ const Index: FC = () => {
 												: `${__simpleIcons__}${site}.svg`
 										}
 										color={siteData.color}
+										key={siteData.url}
 									/>
 								</Fragment>
 							);

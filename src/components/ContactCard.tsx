@@ -9,7 +9,7 @@ interface Props {
 
 const ContactCard: FC<Props> = ({ url, imageUrl, color }) => {
 	return (
-		<a href={url} target="_blank" key={url}>
+		<a href={url} target="_blank">
 			<div
 				className={styles["contact-card"]}
 				style={{ border: `2px solid ${color}` }}

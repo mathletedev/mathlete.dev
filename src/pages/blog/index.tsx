@@ -26,7 +26,7 @@ const Blog: FC<Props> = ({ posts }) => {
 			</div>
 			{posts &&
 				posts.map((post, i) => (
-					<PostCard blogID={post.postID} index={i} key={post.postID} />
+					<PostCard post={post} index={i} key={post.postID} />
 				))}
 			<div id={styles.extra}></div>
 		</div>

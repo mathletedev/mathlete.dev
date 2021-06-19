@@ -22,6 +22,22 @@
 	padding-top: 10px;
 }
 
+.spacer {
+	margin: auto;
+	margin-top: 5px;
+	height: 2px;
+	width: 25%;
+	background-color: tomato;
+}
+
+.post-subtitle {
+	margin-top: 15px;
+	margin-left: 10%;
+	margin-right: 10%;
+	color: white;
+	font-size: 18px;
+}
+
 @media only screen and (max-width: 1200px) {
 	.post-card {
 		width: 100%;

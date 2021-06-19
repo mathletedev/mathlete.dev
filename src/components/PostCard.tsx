@@ -1,23 +1,22 @@
 import Link from "next/link";
 import React, { FC } from "react";
-import { dashCapitalize } from "../lib/utils";
+import { PostData } from "../../loader";
 import styles from "../styles/postcard.module.css";
 
 interface Props {
-	blogID: string;
-	title?: string;
+	post: PostData;
 	index: number;
 }
 
-const BlogCard: FC<Props> = ({ blogID, title, index }) => {
+const BlogCard: FC<Props> = ({ post, index }) => {
 	return (
-		<Link href={`/blog/${blogID}`}>
+		<Link href={`/blog/${post.postID}`}>
 			<a>
 				<div data-aos={`fade-${index % 2 === 0 ? "right" : "left"}`}>
 					<div className={styles["post-card"]}>
-						<div className={styles["post-title"]}>
-							{title ? title : dashCapitalize(blogID)}
-						</div>
+						<div className={styles["post-title"]}>{post.title}</div>
+						<div className={styles.spacer}></div>
+						<div className={styles["post-subtitle"]}>{post.subtitle}</div>
 					</div>
 				</div>
 			</a>

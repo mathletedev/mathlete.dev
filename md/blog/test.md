@@ -1,6 +1,6 @@
 ---
 title: "Test"
-subtitle: "test test"
+subtitle: "test test test test test test test test test"
 ---
 
 ### Test
