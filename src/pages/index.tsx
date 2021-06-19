@@ -7,14 +7,14 @@ import { __contactSites__, __simpleIcons__ } from "../lib/constants";
 import styles from "../styles/index.module.css";
 
 const Index: FC = () => {
-	const contactRef = useRef(null);
+	const headingRef = useRef(null);
 
-	const [contactHeight, setContactHeight] = useState(0);
+	const [headingHeight, setHeadingHeight] = useState(0);
 	const [windowWidth, setWindowWidth] = useState(0);
 
 	useEffect(() => {
-		setContactHeight(contactRef.current.clientHeight || 0);
-	}, [contactRef.current?.clientHeight]);
+		setHeadingHeight(headingRef.current.clientHeight || 0);
+	}, [headingRef.current?.clientHeight]);
 
 	useEffect(() => {
 		const resize = () => setWindowWidth(window.innerWidth);
@@ -54,7 +54,11 @@ const Index: FC = () => {
 					</a>
 				</Page>
 				<Page id="about">
-					<div className={styles.heading} data-aos="fade-right">
+					<div
+						className={styles.heading}
+						data-aos="fade-right"
+						ref={headingRef}
+					>
 						About
 					</div>
 				</Page>
@@ -62,18 +66,18 @@ const Index: FC = () => {
 					<div className={styles.heading} data-aos="fade-left">
 						Skills
 					</div>
+					<div
+						id={styles["skills-graph"]}
+						style={{ height: `calc(100% - ${headingHeight}px)` }}
+					></div>
 				</Page>
 				<Page id="contact" last>
-					<div
-						className={styles.heading}
-						data-aos="fade-right"
-						ref={contactRef}
-					>
+					<div className={styles.heading} data-aos="fade-right">
 						Contact
 					</div>
 					<div
 						id={styles["center-contacts"]}
-						style={{ height: `calc(100% - ${contactHeight}px)` }}
+						style={{ height: `calc(100% - ${headingHeight}px)` }}
 					>
 						{Object.keys(__contactSites__).map((site, i) => {
 							const siteData = __contactSites__[site];
@@ -81,7 +85,7 @@ const Index: FC = () => {
 							return (
 								<Fragment>
 									{(windowWidth < 900 ? i % 2 === 0 : i === 3) && (
-										<hr id={styles["flex-break"]}></hr>
+										<hr id={styles["flex-break"]} key={i}></hr>
 									)}
 									<ContactCard
 										url={siteData.url}
@@ -91,7 +95,6 @@ const Index: FC = () => {
 												: `${__simpleIcons__}${site}.svg`
 										}
 										color={siteData.color}
-										key={site}
 									/>
 								</Fragment>
 							);
