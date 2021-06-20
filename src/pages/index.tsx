@@ -84,9 +84,9 @@ const Index: FC = () => {
 							const siteData = __contactSites__[site];
 
 							return (
-								<Fragment>
+								<Fragment key={i}>
 									{(windowWidth < 900 ? i % 2 === 0 : i === 3) && (
-										<hr id={styles["flex-break"]} key={i}></hr>
+										<hr id={styles["flex-break"]}></hr>
 									)}
 									<ContactCard
 										url={siteData.url}

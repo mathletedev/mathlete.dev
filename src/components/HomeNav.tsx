@@ -25,7 +25,6 @@ const HomeNav: FC = () => {
 			<button
 				onClick={() => router.push("/more")}
 				className={styles["nav-button-link"]}
-				key="more"
 			>
 				<MdMore className={styles["nav-button"]} />
 			</button>
