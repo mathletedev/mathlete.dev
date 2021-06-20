@@ -20,7 +20,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 
 const Blog: FC<Props> = ({ posts }) => {
 	return (
-		<div id={styles.center}>
+		<div id="center">
 			<div id={styles.title} className="unselectable">
 				Blog
 			</div>

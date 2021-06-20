@@ -1,7 +1,7 @@
 .post-card {
 	margin: auto;
 	margin-top: 50px;
-	width: 80%;
+	width: 90%;
 	height: 25vh;
 	border-radius: 25px;
 	border: 2px solid skyblue;
@@ -41,5 +41,11 @@
 @media only screen and (max-width: 1200px) {
 	.post-card {
 		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	.post-title {
+		font-size: 24px;
 	}
 }

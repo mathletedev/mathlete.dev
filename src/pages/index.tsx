@@ -28,7 +28,7 @@ const Index: FC = () => {
 	return (
 		<Fragment>
 			<HomeNav />
-			<div id={styles.center}>
+			<div id="center">
 				<Page id="home">
 					<div id={styles["title-padding"]}></div>
 					<div id={styles.name} className="unselectable">

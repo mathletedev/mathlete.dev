@@ -43,3 +43,14 @@ a {
 	-ms-user-select: none;
 	user-select: none;
 }
+
+#center {
+	margin: auto;
+	width: 50%;
+}
+
+@media only screen and (max-width: 800px) {
+	#center {
+		width: 65%;
+	}
+}
