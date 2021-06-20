@@ -3,6 +3,7 @@ import React, { FC, Fragment, useEffect, useRef, useState } from "react";
 import ContactCard from "../components/ContactCard";
 import HomeNav from "../components/HomeNav";
 import Page from "../components/Page";
+import SkillsChart from "../components/SkillsChart";
 import TypistLoop from "../components/TypistLoop";
 import { __contactSites__, __simpleIcons__ } from "../lib/constants";
 import styles from "../styles/index.module.css";
@@ -49,7 +50,7 @@ const Index: FC = () => {
 						data-aos-duration={2000}
 						data-aos-delay={1000}
 					>
-						<svg height={20} width={40} id={styles["read-more"]}>
+						<svg width={40} height={20} id={styles["read-more"]}>
 							<polygon points="0,0 40,0 20,20" />
 						</svg>
 					</Link>
@@ -70,7 +71,9 @@ const Index: FC = () => {
 					<div
 						id={styles["skills-graph"]}
 						style={{ height: `calc(100% - ${headingHeight}px)` }}
-					></div>
+					>
+						<SkillsChart />
+					</div>
 				</Page>
 				<Page id="contact" last>
 					<div className={styles.heading} data-aos="fade-right">

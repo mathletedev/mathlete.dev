@@ -1,6 +1,11 @@
 import { IconType } from "react-icons";
 import { MdAssessment, MdContactMail, MdHome, MdInfo } from "react-icons/md";
 
+interface TechnologyData {
+	technology: string;
+	level: number;
+}
+
 interface ContactData {
 	url: string;
 	imageUrl?: string;
@@ -16,6 +21,33 @@ export const __homePages__: Record<string, IconType> = {
 	skills: MdAssessment,
 	contact: MdContactMail
 };
+
+export const skillsData: TechnologyData[] = [
+	{
+		technology: "TypeScript",
+		level: 32
+	},
+	{
+		technology: "C++",
+		level: 24
+	},
+	{
+		technology: "Python",
+		level: 16
+	},
+	{
+		technology: "React",
+		level: 32
+	},
+	{
+		technology: "GraphQL",
+		level: 16
+	},
+	{
+		technology: "MongoDB",
+		level: 24
+	}
+];
 
 export const __simpleIcons__ =
 	"https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/";
