@@ -1,8 +1,9 @@
 import { sync } from "glob";
 import { GetStaticPaths, GetStaticProps } from "next";
-import React, { FC, Fragment } from "react";
+import React, { FC } from "react";
 import ReactMarkdown from "react-markdown";
 import { loadPost, PostData } from "../../../loader";
+import styles from "../../styles/blog.module.css";
 
 interface Props {
 	postID: string;
@@ -35,11 +36,13 @@ export const getStaticProps: GetStaticProps<Props> = async (context) => {
 
 const BlogPage: FC<Props> = ({ postID, post }) => {
 	return (
-		<Fragment>
-			<h1>{post.title}</h1>
-			<h2>{post.subtitle}</h2>
-			<ReactMarkdown>{post.content}</ReactMarkdown>
-		</Fragment>
+		<div id="center">
+			<div id={styles.title}>{post.title}</div>
+			<div id={styles.subtitle}>{post.subtitle}</div>
+			<ReactMarkdown className={styles.markdown} linkTarget="_blank">
+				{post.content}
+			</ReactMarkdown>
+		</div>
 	);
 };
 

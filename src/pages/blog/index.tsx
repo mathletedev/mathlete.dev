@@ -1,6 +1,6 @@
 import { GetStaticProps } from "next";
 import React, { FC } from "react";
-import { getAllPosts, PostData } from "../../../loader";
+import { loadAllPosts, PostData } from "../../../loader";
 import PostCard from "../../components/PostCard";
 import styles from "../../styles/blog.module.css";
 
@@ -9,7 +9,7 @@ interface Props {
 }
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-	const posts = await getAllPosts();
+	const posts = await loadAllPosts();
 
 	return {
 		props: {

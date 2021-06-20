@@ -5,10 +5,12 @@ export const dashCapitalize = (str: string) =>
 		.join(" ");
 
 export const getPageName = (pathname: string) => {
+	console.log(pathname.slice(1));
 	switch (pathname.slice(1)) {
 		case "more":
 			return "Rickroll";
 		case "blog":
+		case "blog/[pid]":
 			return "Blog";
 	}
 };
