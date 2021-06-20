@@ -39,7 +39,12 @@ const components = {
 		const match = /language-(\w+)/.exec(className || "");
 
 		return !inline && match ? (
-			<SyntaxHighlighter style={theme} language={match[1]} {...props}>
+			<SyntaxHighlighter
+				style={theme}
+				language={match[1]}
+				showLineNumbers
+				{...props}
+			>
 				{String(children).replace(/\n$/, "")}
 			</SyntaxHighlighter>
 		) : (
@@ -63,6 +68,7 @@ const BlogPage: FC<Props> = ({ post }) => {
 			>
 				{post.content}
 			</ReactMarkdown>
+			<div id={styles.extra}></div>
 		</div>
 	);
 };

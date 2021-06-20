@@ -17,16 +17,32 @@
 	color: white;
 	font-size: 24px;
 	margin: 0;
+	line-height: 1.5em;
 }
 
 .markdown h1 {
 	font-size: 36px;
 	color: skyblue;
-	padding-top: 20px;
-	padding-bottom: 20px;
+	padding-top: 24px;
+	padding-bottom: 24px;
 }
 
-.markdown code * {
+.markdown code {
+	padding: 0.1em;
+	margin: -0.1em 0;
+	border-radius: 3px;
+	background-color: black;
+	font-family: monospace;
+}
+
+.markdown pre code {
+	padding: 0;
+	margin: 0;
+	background: none;
+	white-space: pre-wrap !important;
+}
+
+.markdown pre code * {
 	font-family: monospace;
 	font-size: 18px;
 }
@@ -62,7 +78,7 @@
 		font-size: 18px;
 	}
 
-	.markdown h3 {
+	.markdown h1 {
 		font-size: 28px;
 	}
 }
