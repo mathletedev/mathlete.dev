@@ -11,7 +11,7 @@ interface Props {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-	const posts = sync("./md/blog/*.md");
+	const posts = sync("./blog/*.md");
 	const paths = posts.map(
 		(post) => `/blog/${post.split("/").pop().slice(0, -3)}`
 	);

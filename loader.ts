@@ -30,14 +30,14 @@ const mdToPost = (file: MdFile) => {
 
 const loadMdFile = async (postID: string): Promise<MdFile> => ({
 	postID,
-	contents: (await import(`./md/blog/${postID}.md`)).default
+	contents: (await import(`./blog/${postID}.md`)).default
 });
 
 export const loadPost = async (postID: string) =>
 	mdToPost(await loadMdFile(postID));
 
 export const loadAllPosts = async () => {
-	const mdPaths = sync(`./md/blog/*.md`);
+	const mdPaths = sync(`./blog/*.md`);
 	const allPosts = await Promise.all(
 		mdPaths.map((path) => loadMdFile(path.slice(path.indexOf("blog/") + 5, -3)))
 	);
