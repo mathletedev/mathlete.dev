@@ -2,11 +2,12 @@ import { sync } from "glob";
 import { GetStaticPaths, GetStaticProps } from "next";
 import React, { FC } from "react";
 import ReactMarkdown from "react-markdown";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { atomDark as theme } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import { loadPost, PostData } from "../../../loader";
 import styles from "../../styles/blog.module.css";
 
 interface Props {
-	postID: string;
 	post: PostData;
 }
 
@@ -28,18 +29,38 @@ export const getStaticProps: GetStaticProps<Props> = async (context) => {
 
 	return {
 		props: {
-			postID,
 			post
 		}
 	};
 };
 
-const BlogPage: FC<Props> = ({ postID, post }) => {
+const components = {
+	code({ node, inline, className, children, ...props }) {
+		const match = /language-(\w+)/.exec(className || "");
+
+		return !inline && match ? (
+			<SyntaxHighlighter style={theme} language={match[1]} {...props}>
+				{String(children).replace(/\n$/, "")}
+			</SyntaxHighlighter>
+		) : (
+			<code className={className} {...props}>
+				{children}
+			</code>
+		);
+	}
+};
+
+const BlogPage: FC<Props> = ({ post }) => {
 	return (
 		<div id="center">
 			<div id={styles.title}>{post.title}</div>
 			<div id={styles.subtitle}>{post.subtitle}</div>
-			<ReactMarkdown className={styles.markdown} linkTarget="_blank">
+			<ReactMarkdown
+				className={styles.markdown}
+				// @ts-expect-error
+				components={components}
+				linkTarget="_blank"
+			>
 				{post.content}
 			</ReactMarkdown>
 		</div>
