@@ -21,14 +21,7 @@ body,
 #__next > div {
 	height: 100%;
 	margin: 0;
-	background-image: linear-gradient(
-		to bottom left,
-		var(--grey4),
-		var(--grey3),
-		var(--grey2),
-		var(--grey1)
-	);
-	background-attachment: fixed;
+	background-color: var(--grey3);
 	scroll-behavior: smooth;
 }
 
