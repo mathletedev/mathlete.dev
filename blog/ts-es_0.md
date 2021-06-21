@@ -1,6 +1,7 @@
 ---
-title: "TypeScript Discord Bot Tutorial #0"
+title: TypeScript Discord Bot Tutorial #0
 subtitle: "Making a Discord Bot with TypeScript and Eris-Sharder: Setting Things Up"
+publishedAt: 6/20/2021
 ---
 
 # Tools

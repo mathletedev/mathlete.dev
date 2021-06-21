@@ -1,6 +1,6 @@
 import { sync } from "glob";
 import { GetStaticPaths, GetStaticProps } from "next";
-import React, { FC } from "react";
+import React, { ElementType, FC } from "react";
 import ReactMarkdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { atomDark as theme } from "react-syntax-highlighter/dist/cjs/styles/prism";
@@ -34,7 +34,7 @@ export const getStaticProps: GetStaticProps<Props> = async (context) => {
 	};
 };
 
-const components = {
+const components: { [nodeType: string]: ElementType } = {
 	code({ node, inline, className, children, ...props }) {
 		const match = /language-(\w+)/.exec(className || "");
 
@@ -56,13 +56,17 @@ const components = {
 };
 
 const BlogPage: FC<Props> = ({ post }) => {
+	const date = new Date(post.publishedAt);
+
 	return (
 		<div id="center">
 			<div id={styles.title}>{post.title}</div>
+			<div id={styles.date}>{`${
+				date.getMonth() + 1
+			}/${date.getDate()}/${date.getFullYear()}`}</div>
 			<div id={styles.subtitle}>{post.subtitle}</div>
 			<ReactMarkdown
 				className={styles.markdown}
-				// @ts-expect-error
 				components={components}
 				linkTarget="_blank"
 			>

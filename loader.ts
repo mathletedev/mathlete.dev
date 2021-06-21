@@ -6,6 +6,7 @@ export interface PostData {
 	title: string;
 	subtitle: string;
 	content: string;
+	publishedAt: number;
 }
 
 type MdFile = { postID: string; contents: string };
@@ -17,13 +18,16 @@ const mdToPost = (file: MdFile) => {
 		postID: file.postID,
 		title: data.data.title,
 		subtitle: data.data.subtitle,
-		content: data.content
+		content: data.content,
+		publishedAt: new Date(data.data.publishedAt).getTime()
 	};
 
 	if (!post.title)
 		throw new Error(`Post [ ${file.postID} ] is missing field [ title ]`);
 	if (!post.content)
 		throw new Error(`Post [ ${file.postID} ] is missing field [ content ]`);
+	if (!post.publishedAt)
+		throw new Error(`Post [ ${file.postID} ] is missing field [ publishedAt ]`);
 
 	return post;
 };
@@ -42,5 +46,7 @@ export const loadAllPosts = async () => {
 		mdPaths.map((path) => loadMdFile(path.slice(path.indexOf("blog/") + 5, -3)))
 	);
 
-	return allPosts.map(mdToPost);
+	return allPosts
+		.map(mdToPost)
+		.sort((p1, p2) => p2.publishedAt - p1.publishedAt);
 };

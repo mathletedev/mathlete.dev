@@ -1,16 +1,45 @@
 #title {
 	text-align: center;
-	font-size: 72px;
 	color: white;
+	font-size: 60px;
 	font-weight: bold;
 	padding-top: 50px;
 }
 
 #subtitle {
-	text-align: center;
+	margin-top: 15px;
+	margin-left: 10%;
+	color: skyblue;
 	font-size: 28px;
-	color: tomato;
 	font-style: italic;
+}
+
+#date {
+	text-align: center;
+	color: tomato;
+	font-size: 18px;
+	overflow: hidden;
+}
+
+#date:before,
+#date:after {
+	background-color: tomato;
+	content: "";
+	display: inline-block;
+	height: 2px;
+	position: relative;
+	vertical-align: middle;
+	width: 20%;
+}
+
+#date:before {
+	right: 0.5em;
+	margin-left: -50%;
+}
+
+#date:after {
+	left: 0.5em;
+	margin-right: -50%;
 }
 
 .markdown * {
@@ -33,6 +62,10 @@
 	border-radius: 3px;
 	background-color: black;
 	font-family: monospace;
+}
+
+.markdown pre pre {
+	border: 2px solid skyblue;
 }
 
 .markdown pre code {
