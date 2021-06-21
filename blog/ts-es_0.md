@@ -109,7 +109,7 @@ const _ = new Master(process.env.BOT_TOKEN!, "/dist/main.js", {
 });
 ```
 
-`process.env` is a variable that contains all your environment information, including the bot token you just set. We need to add an exclamation mark (!) to the end of it, since TypeScript thinks that process.env.BOT_TOKEN might be undefined, while we know it is. (We just set it!)
+`process.env` is a variable that contains all your environment information, including the bot token you just set. We need to add an exclamation mark `!` to the end of it, since TypeScript thinks that process.env.BOT_TOKEN might be undefined, while we know it is. (We just set it!)
 
 # Creating a main.ts
 
