@@ -39,12 +39,7 @@ const components: { [nodeType: string]: ElementType } = {
 		const match = /language-(\w+)/.exec(className || "");
 
 		return !inline && match ? (
-			<SyntaxHighlighter
-				style={theme}
-				language={match[1]}
-				showLineNumbers
-				{...props}
-			>
+			<SyntaxHighlighter style={theme} language={match[1]} {...props}>
 				{String(children).replace(/\n$/, "")}
 			</SyntaxHighlighter>
 		) : (
