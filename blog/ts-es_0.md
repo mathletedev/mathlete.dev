@@ -13,13 +13,13 @@ publishedAt: 6/20/2021
 
 # Installing the Dependencies
 
-Open up your terminal by pressing `` Ctrl + ` `` (the backtick key) or by going to `Terminal > New Terminal`. Type
+Start up Visual Studio code, then open the terminal by pressing `` Ctrl + ` `` (the backtick key) or by going to `Terminal > New Terminal`. Type
 
 ```bash
 npm init
 ```
 
-and hit Enter. You can just press enter through all of the questions, since the default settings are fine. This initializes your project so you can install external libraries. Next, type
+and hit Enter. Press enter through all of the questions, since the default settings are fine. This initializes your project so you can install external libraries. Next, type
 
 ```bash
 npm install eris-sharder eris dotenv-safe & npm install @types/eris-sharder @types/node
@@ -35,7 +35,7 @@ to install the necessary libraries. You're now good to go!
 
 # Setting up TypeScript
 
-When using TypeScript, you should create a tsconfig.json file at the base of your project, which tells the compiler what to do. First, create a file in the same directory as your package.json, and name it `tsconfig.json`. Next, you can take a look at [the tsconfig options](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html) and create your own tsconfig, or you can copy the one I have below:
+When using TypeScript, you should create a tsconfig.json file at the base of your project, which tells the compiler what to do. First, create a file in the same directory as your package.json, and name it `tsconfig.json`. Next, you can take a look at [the tsconfig options](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html) and create your own tsconfig, or copy the one I use below:
 
 ```json
 {
@@ -57,7 +57,7 @@ and paste it into the file you just made.
 
 # Creating an index.ts
 
-All bots have an entry file, which I like to call "index.ts", or "bot.ts". This is the file you run to start up your bot. Make a new folder in the same directory as your package.json and tsconfig.json, and name it `src`. You can then make a new file in the src folder you just created, and name it `index.ts` (or `bot.ts` if you want).
+All bots have an entry file, which I like to call "index.ts", or "bot.ts". This is the file you run to start up your bot. Make a new folder in the same directory as your package.json and tsconfig.json, and name it `src`. Then, make a new file in the src folder you just created, and name it `index.ts` (or `bot.ts` if you want).
 
 To import Eris-Sharder, type this into `index.ts`:
 

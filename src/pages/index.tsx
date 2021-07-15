@@ -63,6 +63,23 @@ const Index: FC = () => {
 					>
 						About
 					</div>
+					<div id={styles["about-paragraphs"]}>
+						<p>
+							I am a high school student who codes for fun! I made this website
+							portfolio with Next.js, React, and TypeScript.
+						</p>
+						<p>
+							In school, I've participated in many math and science
+							competitions, as I enjoy problem solving. In my free time I also
+							play the violin!
+						</p>
+						<p>
+							I started programming at the age of 10, when I went to a camp to
+							learn some Python. Since then, I have learned C#, JavaScript,
+							TypeScript, C++, and Java, and I have made countless projects
+							(most of which fail) with what I learn!
+						</p>
+					</div>
 				</Page>
 				<Page id="skills">
 					<div className={styles.heading} data-aos="fade-left">

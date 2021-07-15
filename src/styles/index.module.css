@@ -35,6 +35,15 @@
 	animation: none;
 }
 
+#about-paragraphs {
+	padding-top: 20px;
+	margin: auto;
+	width: 90%;
+	font-size: 24px;
+	color: white;
+	line-height: 2em;
+}
+
 #skills-graph {
 	width: 100%;
 }
@@ -61,6 +70,12 @@
 	}
 }
 
+@media only screen and (max-width: 950px) {
+	#about-paragraphs {
+		font-size: 20px;
+	}
+}
+
 @media only screen and (max-width: 800px) {
 	#name {
 		font-size: 48px;
@@ -70,6 +85,12 @@
 @media only screen and (max-width: 700px) {
 	.heading {
 		font-size: 30px;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	#about-paragraphs {
+		font-size: 18px;
 	}
 }
 
