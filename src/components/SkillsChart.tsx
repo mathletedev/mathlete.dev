@@ -14,10 +14,13 @@ const SkillsChart: FC = () => {
 		<ResponsiveContainer width="100%" height="100%">
 			<RadarChart data={skillsData}>
 				<PolarGrid stroke="white" />
-				<PolarAngleAxis dataKey="technology" tick={{ fill: "skyblue" }} />
+				<PolarAngleAxis
+					dataKey="technology"
+					tick={{ fontSize: "2vmin", fill: "skyblue" }}
+				/>
 				<PolarRadiusAxis
 					angle={90 - 360 / skillsData.length}
-					tick={{ fill: "skyblue" }}
+					tick={{ fontSize: "2vmin", fill: "skyblue" }}
 				/>
 				<Radar
 					dataKey="level"

@@ -81,11 +81,7 @@ After doing this, your index.ts is almost ready! We just need to make a bot appl
 
 Head over to the [Discord Developer Portal](https://discord.com/developers/applications) and sign in to Discord. From there, click `New Application` and give your bot a name. After you do so, go to the Bot tab and click `Add a Bot`. This is all you have to do to create a bot on Discord!
 
-<br />
-
 We need to do one more thing. Click on `Copy` under the Token section, and that should copy a long string of characters onto your clipboard. This is your bot token, which you should **_never_** share with anyone else. It's sort of like your bot's login details, so anyone who can access that also has full control over your bot.
-
-<br />
 
 Back in Visual Studio Code, you want to add another line under your first import statement. In this line, write:
 
@@ -131,8 +127,6 @@ export = class Bot extends Base {
 ```
 
 Since we are exporting this Bot class to be used in index.ts, we need to extend it off of Base. `constructor()` is a function that is used in JavaScript and Typescript, and is used to create a new instance of a class. We need this, since the Eris Client uses these options when setting up the bot. We can pass those options to the bot with `super(options)`.
-
-<br />
 
 You may be getting an error in TypeScript, saying that "launch()" is not implemented. That is because `launch()` is a method of Base that is called when the bot first logs in to Discord. We can implement it by saying:
 

@@ -4,7 +4,7 @@
 
 #name {
 	text-align: center;
-	font-size: 72px;
+	font-size: 8vmin;
 	color: white;
 	font-weight: bold;
 }
@@ -12,7 +12,7 @@
 .heading {
 	padding-top: 50px;
 	text-align: center;
-	font-size: 48px;
+	font-size: 5vmin;
 	color: white;
 	font-weight: bold;
 }
@@ -36,10 +36,10 @@
 }
 
 #about-paragraphs {
-	padding-top: 20px;
+	padding-top: 2vh;
 	margin: auto;
 	width: 90%;
-	font-size: 24px;
+	font-size: 2.5vmin;
 	color: white;
 	line-height: 2em;
 }
@@ -70,32 +70,8 @@
 	}
 }
 
-@media only screen and (max-width: 950px) {
-	#about-paragraphs {
-		font-size: 20px;
-	}
-}
-
-@media only screen and (max-width: 800px) {
-	#name {
-		font-size: 48px;
-	}
-}
-
-@media only screen and (max-width: 700px) {
-	.heading {
-		font-size: 30px;
-	}
-}
-
-@media only screen and (max-width: 600px) {
-	#about-paragraphs {
-		font-size: 18px;
-	}
-}
-
-@media only screen and (max-width: 500px) {
-	#name {
-		font-size: 30px;
+@media only screen and (max-width: 900px) and (max-height: 600px) {
+	.about-paragraphs {
+		font-size: 5vmin;
 	}
 }

@@ -15,11 +15,12 @@
 
 .post-title {
 	text-align: center;
-	margin: 0;
 	color: white;
 	font-weight: bold;
-	font-size: 36px;
+	font-size: 4vmin;
 	margin-top: 15px;
+	margin-left: 20px;
+	margin-right: 20px;
 }
 
 .post-date {
@@ -56,17 +57,11 @@
 	margin-right: 10%;
 	color: white;
 	font-style: italic;
-	font-size: 18px;
-}
-
-@media only screen and (max-width: 1200px) {
-	.post-card {
-		width: 100%;
-	}
+	font-size: 2vmin;
 }
 
 @media only screen and (max-width: 800px) {
-	.post-title {
-		font-size: 24px;
+	.post-subtitle {
+		font-size: 3vmin;
 	}
 }

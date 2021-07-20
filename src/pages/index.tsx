@@ -13,13 +13,17 @@ const Index: FC = () => {
 
 	const [headingHeight, setHeadingHeight] = useState(0);
 	const [windowWidth, setWindowWidth] = useState(0);
+	const [windowHeight, setWindowHeight] = useState(0);
 
 	useEffect(() => {
 		setHeadingHeight(headingRef.current.clientHeight || 0);
 	}, [headingRef.current?.clientHeight]);
 
 	useEffect(() => {
-		const resize = () => setWindowWidth(window.innerWidth);
+		const resize = () => {
+			setWindowWidth(window.innerWidth);
+			setWindowHeight(window.innerHeight);
+		};
 
 		resize();
 		window.addEventListener("resize", resize);
@@ -105,7 +109,7 @@ const Index: FC = () => {
 
 							return (
 								<Fragment key={i}>
-									{(windowWidth < 900 ? i % 2 === 0 : i === 3) && (
+									{(windowWidth < windowHeight ? i % 2 === 0 : i === 3) && (
 										<hr id={styles["flex-break"]}></hr>
 									)}
 									<ContactCard

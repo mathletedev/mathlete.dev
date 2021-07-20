@@ -14,7 +14,7 @@
 	color: skyblue;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 800px), (max-height: 700px) {
 	.nav-link {
 		font-size: 18px;
 	}

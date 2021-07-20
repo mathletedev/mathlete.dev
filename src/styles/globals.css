@@ -41,7 +41,7 @@ a {
 	width: 50%;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 900px) {
 	#center {
 		width: 65%;
 	}
