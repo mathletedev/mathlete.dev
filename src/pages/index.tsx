@@ -79,9 +79,9 @@ const Index: FC = () => {
 						</p>
 						<p>
 							I started programming at the age of 10, when I went to a camp to
-							learn some Python. Since then, I have learned C#, JavaScript,
+							learn some Python. Since then, I've learned C#, JavaScript,
 							TypeScript, C++, and Java, and I have made countless projects
-							(most of which fail) with what I learn!
+							(most of which fail) with the knowledge I have gained!
 						</p>
 					</div>
 				</Page>
