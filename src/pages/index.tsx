@@ -45,7 +45,7 @@ const Index: FC = () => {
 							"Fisiks Boi",
 							"Violinist",
 							"Mathlete",
-							"TypeScript User"
+							"TypeScript & Rust User"
 						]}
 					/>
 					<Link
